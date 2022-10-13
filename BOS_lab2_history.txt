@@ -1,0 +1,81 @@
+    1  clear
+    2  mkdir test
+    3  cd test
+    4  touch file
+    5  ls -l
+    6  chmod ugo-rwx file
+    7  echo "тест" > file
+    8  cat file
+    9  chmod u+w file
+   10  ll
+   11  echo "тест" > file
+   12  cat file
+   13  chmod g+w file
+   14  cat file
+   15  chmod g+r file
+   16  cat file
+   17  ll
+   18  chmod g-w file
+   19  ll
+   20  cat file
+   21* chmod +r file
+   22  ll
+   23  cat file
+   24  mkdir dir
+   25  cd dir
+   26  touch new_file
+   27  echo "test" > file
+   28  ls
+   29  rm new_file
+   30  touch new_file
+   31  ls
+   32  chmod ugo-x new_file
+   33  rm new_file
+   34  cat new_file
+   35  touch new_file
+   36  chmod ugo-x new_file
+   37  ll
+   38  cat new_file
+   39  cd ..
+   40  chmod ugo-x dit
+   41  chmod ugo-x dir
+   42  cat dir/new_file
+   43  rm dir/new_file
+   44  chown root dir/new_file
+   45  chown root file
+   46  umask 6
+   47  umask -S
+   48  umask 117
+   49  umask -S
+   50  umask 177
+   51  umask -S
+   52  touch file2
+   53  rm file2
+   54  rm file1
+   55  touch file1
+   56  ls -l
+   57  umask 666
+   58  umask -S
+   59  umask a=rw
+   60  umask -S
+   61  touch file2
+   62  ls -l
+   63  cat file
+   64  sudo chmod g+r file
+   65  su
+   66  ls-l
+   67  ls -l
+   68  cat file
+   69  ls -lR
+   70  ls -lR > -BOS_lab2.txt
+   71  history  > -BOS_lab2.txt
+   72  ls
+   73  history  > BOS_lab2.txt
+   74  rm -BOS_lab2.txt
+   75  ls
+   76  rm BOS_lab2.txt
+   77  rm '-BOS_lab2.txt'
+   78  rm ./-BOS_lab2.txt
+   79  ls
+   80  ls -lR > BOS_lab2_ls.txt
+   81  history  > BOS_lab2_history.txt
